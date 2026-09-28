@@ -17,7 +17,20 @@
     <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center">
       <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="search.html">Find errands</a></li><li class="nav-item"><a class="nav-link" href="view-post.html">Task details</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="post.html">Post an errand</a></li><li class="nav-item"><a class="nav-link" href="profile.html">Wallet</a></li><li class="nav-item"><a class="nav-link" href="login.html">Sign in</a></li><li class="nav-item ms-lg-1"><a class="btn btn-primary btn-sm px-3" href="signup.html">Join Errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></li>
     </ul></div>
+    <button class="btn btn-outline-dark notification-trigger ms-2" type="button" data-bs-toggle="modal" data-bs-target="#notificationsModal" aria-label="Notifications, 3 unread" title="Notifications"><i class="fa-regular fa-bell" aria-hidden="true"></i><span class="notification-count" aria-hidden="true">3</span></button>
   </div></nav>
+
+  <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow">
+      <div class="modal-header"><div><span class="eyebrow">Your Errand updates</span><h2 class="modal-title h4 mt-1" id="notificationsTitle">Notifications</h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close notifications"></button></div>
+      <div class="modal-body">
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><div><strong>New offer on your grocery errand</strong><p class="small muted mb-1">Alex offered $32.00 for your North Park pickup.</p><a class="small fw-bold text-decoration-none" href="posted-errand.html">Review offers <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span><div><strong>Your brunch errand is complete</strong><p class="small muted mb-1">Casey finished the pickup. See the poster record.</p><a class="small fw-bold text-decoration-none" href="completed-errand.html">View completed errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><strong>Fresh tasks nearby</strong><p class="small muted mb-1">There are new errands in your neighborhood.</p><a class="small fw-bold text-decoration-none" href="search.html">Browse errands <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
+  </div>
 
   <main class="page-wrap"><div class="container">
     <div class="row justify-content-center"><div class="col-lg-8 col-xl-7">

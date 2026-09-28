@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Review runner offers for your posted Errand task.">
+  <title>Review offers | Errand</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top"><div class="container">
+    <a class="navbar-brand" href="../index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span><img class="brand-image-placeholder" src="../assets/logo.png" alt="Errand Logo" height="30">Errand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="search.html">Find errands</a></li><li class="nav-item"><a class="nav-link" href="view-post.html">Task details</a></li><li class="nav-item"><a class="nav-link" href="post.html">Post an errand</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Wallet</a></li><li class="nav-item"><a class="nav-link" href="login.html">Sign in</a></li><li class="nav-item ms-lg-1"><a class="btn btn-primary btn-sm px-3" href="signup.html">Join Errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></li>
+    </ul></div>
+    <button class="btn btn-outline-dark notification-trigger ms-2" type="button" data-bs-toggle="modal" data-bs-target="#notificationsModal" aria-label="Notifications, 3 unread" title="Notifications"><i class="fa-regular fa-bell" aria-hidden="true"></i><span class="notification-count" aria-hidden="true">3</span></button>
+  </div></nav>
+
+  <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow">
+      <div class="modal-header"><div><span class="eyebrow">Your Errand updates</span><h2 class="modal-title h4 mt-1" id="notificationsTitle">Notifications</h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close notifications"></button></div>
+      <div class="modal-body">
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><div><strong>New offer on your grocery errand</strong><p class="small muted mb-1">Alex offered $32.00 for your North Park pickup.</p><a class="small fw-bold text-decoration-none" href="posted-errand.html">Review offers <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span><div><strong>Your brunch errand is complete</strong><p class="small muted mb-1">Casey finished the pickup. See the poster record.</p><a class="small fw-bold text-decoration-none" href="completed-errand.html">View completed errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><strong>Fresh tasks nearby</strong><p class="small muted mb-1">There are new errands in your neighborhood.</p><a class="small fw-bold text-decoration-none" href="search.html">Browse errands <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
+  </div>
+
+  <main class="page-wrap"><div class="container">
+    <a class="small fw-bold text-decoration-none d-inline-block mb-3" href="profile.html"><i class="fa-solid fa-arrow-left me-1" aria-hidden="true"></i> Back to posted errands</a>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4"><div><span class="eyebrow">Poster workspace · Errand #ER-3082</span><h1 class="section-title mt-2 mb-1">Pick up a few groceries</h1><p class="muted mb-0">Compare runner offers before choosing who’ll take care of it.</p></div><span class="pill pill-amber" id="taskStatus"><i class="fa-solid fa-hourglass-half me-1" id="taskStatusIcon" aria-hidden="true"></i><span id="taskStatusText">Accepting offers</span></span></div>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-7">
+        <section class="surface p-4 p-md-5 mb-4"><div class="d-flex flex-wrap gap-3 muted small mb-4"><span><i class="fa-solid fa-basket-shopping me-1" aria-hidden="true"></i>Shopping</span><span><i class="fa-solid fa-location-dot me-1" aria-hidden="true"></i>North Park</span><span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>Today before 6 pm</span></div><h2 class="h5">Errand details</h2><p class="muted">Pick up oat milk, pasta, tomatoes, and seasonal fruit from any nearby market. Please check in if something is out of stock. The groceries will be reimbursed separately from the runner fee.</p><div class="soft-panel p-3 d-flex flex-wrap justify-content-between align-items-center gap-2"><span class="muted">Your runner-fee budget</span><strong class="gig-budget">$25 – $40</strong></div></section>
+        <section><div class="d-flex justify-content-between align-items-end gap-2 mb-3"><div><span class="eyebrow">Runner proposals</span><h2 class="h4 mt-2 mb-0" id="offersHeading">2 offers to review</h2></div><span class="small muted">Choose one runner</span></div>
+          <article class="offer-card mb-3" data-offer-row>
+            <div class="d-flex flex-column flex-sm-row justify-content-between gap-3"><div class="d-flex align-items-center gap-3"><div class="poster-avatar">AM</div><div><h3 class="h6 mb-1">Alex Morgan <span class="pill pill-green ms-1"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>Verified</span></h3><div class="small muted"><i class="fa-solid fa-star text-warning me-1" aria-hidden="true"></i>4.9 · 18 completed errands · 96% on time</div></div></div><div class="text-sm-end"><div class="gig-budget">$32.00</div><span class="small muted">Runner fee</span></div></div>
+            <p class="muted small mt-3 mb-3">“I’m already heading past the market and can have this to you before 5.”</p><div class="d-flex flex-wrap justify-content-between align-items-center gap-2"><span class="small muted">Offer status: <strong data-offer-status>Waiting for your decision</strong></span><div class="d-flex gap-2" data-offer-controls><button class="btn btn-primary btn-sm" type="button" data-offer-action="accept"><i class="fa-solid fa-check me-1" aria-hidden="true"></i>Accept offer</button><button class="btn btn-outline-danger btn-sm" type="button" data-offer-action="reject"><i class="fa-solid fa-xmark me-1" aria-hidden="true"></i>Reject</button></div></div>
+          </article>
+          <article class="offer-card" data-offer-row>
+            <div class="d-flex flex-column flex-sm-row justify-content-between gap-3"><div class="d-flex align-items-center gap-3"><div class="poster-avatar" style="background:#f8e9de;color:#925a32">SK</div><div><h3 class="h6 mb-1">Sam Kim <span class="pill pill-green ms-1"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>Verified</span></h3><div class="small muted"><i class="fa-solid fa-star text-warning me-1" aria-hidden="true"></i>5.0 · 11 completed errands · 100% on time</div></div></div><div class="text-sm-end"><div class="gig-budget">$35.00</div><span class="small muted">Runner fee</span></div></div>
+            <p class="muted small mt-3 mb-3">“Happy to shop at your preferred store. I can arrive around 5:30.”</p><div class="d-flex flex-wrap justify-content-between align-items-center gap-2"><span class="small muted">Offer status: <strong data-offer-status>Waiting for your decision</strong></span><div class="d-flex gap-2" data-offer-controls><button class="btn btn-primary btn-sm" type="button" data-offer-action="accept"><i class="fa-solid fa-check me-1" aria-hidden="true"></i>Accept offer</button><button class="btn btn-outline-danger btn-sm" type="button" data-offer-action="reject"><i class="fa-solid fa-xmark me-1" aria-hidden="true"></i>Reject</button></div></div>
+          </article>
+          <div class="alert alert-success mt-3 mb-0 d-none" id="offerFeedback" role="status" aria-live="polite"></div>
+          <p class="required-note mt-3 mb-0">Offer actions are a local mock interaction and do not contact runners.</p>
+        </section>
+      </div>
+      <aside class="col-lg-5"><section class="surface p-4 mb-4"><div class="d-flex align-items-center gap-3"><div class="avatar-placeholder" style="width:58px;height:58px;font-size:1.15rem" aria-hidden="true">JL</div><div><span class="small muted d-block">Posted by</span><h2 class="h5 mb-1">Jordan Lee</h2><span class="pill pill-green"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>Verified neighbor</span></div></div><div class="small mt-3"><i class="fa-solid fa-star text-warning me-1" aria-hidden="true"></i><strong>4.9</strong><span class="muted"> · 28 community reviews</span></div></section><section class="soft-panel p-4"><h2 class="h6"><i class="fa-solid fa-shield-halved text-success me-2" aria-hidden="true"></i>Before you choose</h2><p class="small muted mb-0">Review the runner’s rating, timing, and message. Accepting an offer assigns that runner to your errand.</p></section></aside>
+    </div>
+  </div></main>
+
+  <footer class="site-footer"><div class="container"><div class="d-flex flex-column flex-lg-row justify-content-between gap-3"><div><a class="navbar-brand text-white" href="../index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span>Errand</a><p class="footer-note mt-2 mb-0">A little help, right around the corner.</p></div><div class="footer-links align-content-start"><a href="../index.html">Home</a><a href="search.html">Find errands</a><a href="view-post.html">Task details</a><a href="post.html">Post an errand</a><a href="profile.html">Wallet</a><a href="login.html">Sign in</a><a href="signup.html">Sign up</a></div><div class="footer-note text-lg-end">© 2025 Errand. All rights reserved.<br>Static mockup for demonstration only.</div></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll("[data-offer-action]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedOffer = button.closest("[data-offer-row]");
+        const action = button.dataset.offerAction;
+
+        if (action === "accept") {
+          document.querySelectorAll("[data-offer-row]").forEach((offer) => {
+            const accepted = offer === selectedOffer;
+            offer.querySelector("[data-offer-status]").textContent = accepted ? "Accepted" : "Not selected";
+            offer.querySelectorAll("[data-offer-action]").forEach((control) => { control.disabled = true; });
+          });
+          const runnerName = selectedOffer.querySelector("h3").childNodes[0].textContent.trim();
+          document.querySelector("#offerFeedback").textContent = `${runnerName} is assigned to this errand. This is a mockup; no runner was notified.`;
+          document.querySelector("#offerFeedback").classList.remove("d-none");
+          document.querySelector("#taskStatus").classList.replace("pill-amber", "pill-green");
+          document.querySelector("#taskStatusIcon").classList.replace("fa-hourglass-half", "fa-circle-check");
+          document.querySelector("#taskStatusText").textContent = "Runner selected";
+          document.querySelector("#offersHeading").textContent = "Runner assigned";
+          return;
+        }
+
+        selectedOffer.querySelector("[data-offer-status]").textContent = "Declined";
+        selectedOffer.classList.add("is-declined");
+        selectedOffer.querySelectorAll("[data-offer-action]").forEach((control) => { control.disabled = true; });
+      });
+    });
+  </script>
+</body>
+</html>

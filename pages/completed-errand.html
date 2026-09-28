@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Poster-side completion record for a finished Errand task.">
+  <title>Completed errand | Errand</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top"><div class="container">
+    <a class="navbar-brand" href="../index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span><img class="brand-image-placeholder" src="../assets/logo.png" alt="Errand Logo" height="30">Errand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="search.html">Find errands</a></li><li class="nav-item"><a class="nav-link" href="view-post.html">Task details</a></li><li class="nav-item"><a class="nav-link" href="post.html">Post an errand</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Wallet</a></li><li class="nav-item"><a class="nav-link" href="login.html">Sign in</a></li><li class="nav-item ms-lg-1"><a class="btn btn-primary btn-sm px-3" href="signup.html">Join Errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></li>
+    </ul></div>
+    <button class="btn btn-outline-dark notification-trigger ms-2" type="button" data-bs-toggle="modal" data-bs-target="#notificationsModal" aria-label="Notifications, 3 unread" title="Notifications"><i class="fa-regular fa-bell" aria-hidden="true"></i><span class="notification-count" aria-hidden="true">3</span></button>
+  </div></nav>
+
+  <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow">
+      <div class="modal-header"><div><span class="eyebrow">Your Errand updates</span><h2 class="modal-title h4 mt-1" id="notificationsTitle">Notifications</h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close notifications"></button></div>
+      <div class="modal-body">
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><div><strong>New offer on your grocery errand</strong><p class="small muted mb-1">Alex offered $32.00 for your North Park pickup.</p><a class="small fw-bold text-decoration-none" href="posted-errand.html">Review offers <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span><div><strong>Your brunch errand is complete</strong><p class="small muted mb-1">Casey finished the pickup. See the poster record.</p><a class="small fw-bold text-decoration-none" href="completed-errand.html">View completed errand <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+        <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><strong>Fresh tasks nearby</strong><p class="small muted mb-1">There are new errands in your neighborhood.</p><a class="small fw-bold text-decoration-none" href="search.html">Browse errands <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
+  </div>
+
+  <main class="page-wrap"><div class="container">
+    <a class="small fw-bold text-decoration-none d-inline-block mb-3" href="profile.html"><i class="fa-solid fa-arrow-left me-1" aria-hidden="true"></i> Back to posted errands</a>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4"><div><span class="eyebrow">Poster record · Errand #ER-2964</span><h1 class="section-title mt-2 mb-1">Groceries for Sunday brunch</h1><p class="muted mb-0">Your completed errand, from request to doorstep.</p></div><span class="pill pill-green"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>Completed Sep 18, 2026</span></div>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-8">
+        <section class="surface p-4 p-md-5"><div class="d-flex flex-wrap gap-3 muted small mb-4"><span><i class="fa-solid fa-basket-shopping me-1" aria-hidden="true"></i>Shopping</span><span><i class="fa-solid fa-location-dot me-1" aria-hidden="true"></i>Hillcrest</span><span><i class="fa-regular fa-calendar me-1" aria-hidden="true"></i>Posted Sep 16, 2026</span></div><h2 class="h5">Errand summary</h2><p class="muted">Pick up bagels, berries, coffee, and oat milk for a small Sunday brunch. Casey checked substitutions before checkout and delivered everything to the front door.</p><div class="row g-3 mt-3"><div class="col-sm-6"><div class="soft-panel p-3 h-100"><span class="small muted d-block">Runner fee paid</span><strong class="gig-budget">$36.00</strong></div></div><div class="col-sm-6"><div class="soft-panel p-3 h-100"><span class="small muted d-block">Grocery reimbursement</span><strong class="gig-budget">$28.40</strong><span class="small muted d-block">Paid separately</span></div></div></div></section>
+        <section class="surface p-4 mt-4"><span class="eyebrow">Task timeline</span><h2 class="h4 mt-2 mb-4">All wrapped up</h2><div class="task-timeline"><div class="task-timeline-item"><strong>Errand posted</strong><p class="small muted mb-0">Sep 16 · Your brunch list was shared with nearby runners.</p></div><div class="task-timeline-item"><strong>Casey accepted</strong><p class="small muted mb-0">Sep 16 · Casey Nguyen’s $36 offer was selected.</p></div><div class="task-timeline-item"><strong>Groceries delivered</strong><p class="small muted mb-0">Sep 18 · Items were dropped at your door and the errand was completed.</p></div></div></section>
+      </div>
+      <aside class="col-lg-4"><section class="surface p-4 mb-4"><div class="d-flex align-items-center gap-3"><div class="poster-avatar" style="width:54px;height:54px">CN</div><div><span class="small muted d-block">Your runner</span><h2 class="h5 mb-1">Casey Nguyen</h2><span class="pill pill-green"><i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>Verified</span></div></div><div class="small mt-3"><i class="fa-solid fa-star text-warning me-1" aria-hidden="true"></i><strong>5.0</strong><span class="muted"> · 22 reviews</span></div><hr style="border-color:var(--line)"><div class="d-flex justify-content-between small py-1"><span class="muted">Offer accepted</span><strong>$36.00</strong></div><div class="d-flex justify-content-between small py-1"><span class="muted">Completion</span><strong>Sep 18, 2026</strong></div></section><a class="btn btn-outline-dark w-100" href="profile.html"><i class="fa-solid fa-list-check me-1" aria-hidden="true"></i> All posted errands</a></aside>
+    </div>
+  </div></main>
+
+  <footer class="site-footer"><div class="container"><div class="d-flex flex-column flex-lg-row justify-content-between gap-3"><div><a class="navbar-brand text-white" href="../index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span>Errand</a><p class="footer-note mt-2 mb-0">A little help, right around the corner.</p></div><div class="footer-links align-content-start"><a href="../index.html">Home</a><a href="search.html">Find errands</a><a href="view-post.html">Task details</a><a href="post.html">Post an errand</a><a href="profile.html">Wallet</a><a href="login.html">Sign in</a><a href="signup.html">Sign up</a></div><div class="footer-note text-lg-end">© 2025 Errand. All rights reserved.<br>Static mockup for demonstration only.</div></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

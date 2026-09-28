@@ -21,7 +21,7 @@
   </div></nav>
 
   <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content border-0 shadow">
       <div class="modal-header"><div><span class="eyebrow">Your Errand updates</span><h2 class="modal-title h4 mt-1" id="notificationsTitle">Notifications</h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close notifications"></button></div>
       <div class="modal-body">
         <div class="notification-entry"><span class="notification-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><div><strong>New offer on your grocery errand</strong><p class="small muted mb-1">Alex offered $32.00 for your North Park pickup.</p><a class="small fw-bold text-decoration-none" href="posted-errand.html">Review offers <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></div>
@@ -42,7 +42,7 @@
           <div class="mb-3"><label class="form-label" for="description">What needs doing?</label><textarea class="form-control" id="description" name="description" rows="5" placeholder="Add useful details, timing, and anything your runner should know..." required></textarea><div class="form-text">Clear details help runners make a fair, accurate offer.</div></div>
           <fieldset class="mb-4"><legend class="form-label mb-2">Your budget range</legend><div class="row g-3"><div class="col-6"><label class="form-label small muted" for="minPrice">Min price</label><div class="input-group"><span class="input-group-text bg-white">$</span><input class="form-control" type="number" id="minPrice" name="minPrice" min="1" step="1" placeholder="25" required></div></div><div class="col-6"><label class="form-label small muted" for="maxPrice">Max price</label><div class="input-group"><span class="input-group-text bg-white">$</span><input class="form-control" type="number" id="maxPrice" name="maxPrice" min="1" step="1" placeholder="40" required></div></div></div></fieldset>
           <div class="soft-panel p-3 mb-4 small muted"><i class="fa-solid fa-lightbulb text-warning me-2" aria-hidden="true"></i>Runners can send an offer within your range. You choose who to work with.</div>
-          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3"><span class="required-note">This demo does not publish a live task.</span><button class="btn btn-primary" type="submit">Preview marketplace <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></button></div>
+          <div class="d-flex flex-column flex-sm-row justify-content-end align-items-sm-center gap-3"><button class="btn btn-primary" type="submit">Preview marketplace <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></button></div>
         </form>
       </section>
     </div></div>
@@ -51,7 +51,7 @@
   <footer class="site-footer"><div class="container"><div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
     <div><a class="navbar-brand text-white" href="../index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span>Errand</a><p class="footer-note mt-2 mb-0">A little help, right around the corner.</p></div>
     <div class="footer-links align-content-start"><a href="../index.html">Home</a><a href="search.html">Find errands</a><a href="view-post.html">Task details</a><a href="post.html">Post an errand</a><a href="profile.html">Wallet</a><a href="login.html">Sign in</a><a href="signup.html">Sign up</a></div>
-    <div class="footer-note text-lg-end">© 2025 Errand. All rights reserved.<br>Static mockup for demonstration only.</div>
+    <div class="footer-note text-lg-end">© 2025 Errand. All rights reserved.</div>
   </div></div></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -47,6 +47,16 @@ a {
   min-height: 74px;
 }
 .navbar-brand {
+  order: 0;
+}
+.navbar-toggler {
+  order: 2;
+}
+.navbar .notification-trigger {
+  order: 1;
+  margin-left: 0.5rem !important;
+}
+.navbar-brand {
   color: var(--ink);
   font-size: 1.3rem;
   letter-spacing: 0;
@@ -606,11 +616,32 @@ a {
   box-shadow: 0 0 0 1px #a9cfc2;
 }
 @media (max-width: 991.98px) {
-  .navbar-nav {
-    padding: 0.5rem 0 0.8rem;
+  .navbar > .container {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .navbar .offcanvas-lg {
+    --bs-offcanvas-width: min(88vw, 340px);
+    background: var(--white);
+    border-left: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .navbar .offcanvas-header {
+    min-height: 74px;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .navbar .offcanvas-body {
+    padding: 1rem 1.25rem;
+  }
+  .navbar .navbar-nav {
+    gap: 0.35rem;
   }
   .navbar .nav-link {
-    padding: 0.55rem 0.65rem !important;
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 0.65rem 0.8rem !important;
   }
   .hero {
     padding: 3.5rem 0;
@@ -621,10 +652,6 @@ a {
   }
 }
 @media (max-width: 575.98px) {
-  .navbar > .container {
-    flex-wrap: nowrap;
-    gap: 0.25rem;
-  }
   .navbar-brand {
     gap: 0.45rem;
     margin-right: 0.25rem;

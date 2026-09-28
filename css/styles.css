@@ -54,7 +54,7 @@ a {
 }
 .navbar .notification-trigger {
   order: 1;
-  margin-left: 0.5rem !important;
+  margin-left: 0 !important;
 }
 .navbar-brand {
   color: var(--ink);
@@ -618,7 +618,11 @@ a {
 @media (max-width: 991.98px) {
   .navbar > .container {
     flex-wrap: nowrap;
-    gap: 0.5rem;
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+  .navbar .notification-trigger {
+    margin-left: auto !important;
   }
   .navbar .offcanvas-lg {
     --bs-offcanvas-width: min(88vw, 340px);

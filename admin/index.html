@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Errand marketplace administration dashboard.">
+  <title>Admin dashboard | Errand</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="admin.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar d-none d-lg-flex" aria-label="Admin navigation">
+      <a class="admin-brand" href="index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span><span>Errand <small>ADMIN</small></span></a>
+      <div class="admin-nav-label">WORKSPACE</div>
+      <nav class="admin-nav">
+        <a class="admin-nav-link active" href="#overview"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Overview</a>
+        <a class="admin-nav-link" href="tasks.html"><i class="fa-solid fa-list-check" aria-hidden="true"></i>Tasks<span class="nav-count">18</span></a>
+        <a class="admin-nav-link" href="users.html"><i class="fa-solid fa-users" aria-hidden="true"></i>Users</a>
+        <a class="admin-nav-link" href="activity.html"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>Activity logs</a>
+      </nav>
+      <div class="admin-sidebar-bottom">
+        <div class="admin-support"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span><strong>Safety center</strong><small>2 reports need review</small></span><i class="fa-solid fa-arrow-right ms-auto" aria-hidden="true"></i></div>
+        <a class="admin-nav-link" href="../index.html"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>View marketplace</a>
+        <div class="admin-profile"><span class="admin-avatar">AD</span><span><strong>Admin Desk</strong><small>Platform administrator</small></span><button class="icon-button ms-auto" type="button" aria-label="Account options"><i class="fa-solid fa-ellipsis" aria-hidden="true"></i></button></div>
+      </div>
+    </aside>
+
+    <div class="admin-workspace">
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-dark admin-menu-button d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#adminMobileNav" aria-controls="adminMobileNav" aria-label="Open admin navigation"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+          <a class="admin-brand admin-mobile-brand d-lg-none" href="index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span><span>Errand</span></a>
+          <div class="admin-breadcrumb d-none d-lg-flex"><span>Workspace</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><strong>Overview</strong></div>
+        </div>
+        <div class="admin-top-actions">
+          <label class="admin-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="globalSearch" type="search" placeholder="Search tasks or users" aria-label="Search tasks or users"><kbd>⌘ K</kbd></label>
+          <button class="icon-button admin-alert-button" type="button" aria-label="Notifications, 3 unread"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>3</span></button>
+          <button class="btn btn-primary btn-sm d-none d-sm-inline-flex" type="button" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="fa-solid fa-arrow-down-to-line me-2" aria-hidden="true"></i>Export report</button>
+        </div>
+      </header>
+
+      <div class="offcanvas offcanvas-start admin-mobile-drawer d-lg-none" tabindex="-1" id="adminMobileNav" aria-labelledby="adminMobileNavTitle">
+        <div class="offcanvas-header"><a class="admin-brand" href="index.html"><span class="brand-symbol"><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i></span><span>Errand <small>ADMIN</small></span></a><button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas" aria-label="Close admin navigation"></button></div>
+        <div class="offcanvas-body"><div class="admin-nav-label" id="adminMobileNavTitle">WORKSPACE</div><nav class="admin-nav"><a class="admin-nav-link active" href="index.html" data-bs-dismiss="offcanvas"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Overview</a><a class="admin-nav-link" href="tasks.html" data-bs-dismiss="offcanvas"><i class="fa-solid fa-list-check" aria-hidden="true"></i>Tasks<span class="nav-count">18</span></a><a class="admin-nav-link" href="users.html" data-bs-dismiss="offcanvas"><i class="fa-solid fa-users" aria-hidden="true"></i>Users</a><a class="admin-nav-link" href="activity.html" data-bs-dismiss="offcanvas"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>Activity logs</a></nav><a class="admin-nav-link mt-4" href="../index.html"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>View marketplace</a></div>
+      </div>
+
+      <main class="admin-main" id="overview">
+        <div class="admin-page-heading"><div><span class="eyebrow">Monday, September 28, 2026</span><h1>Good morning, Admin</h1><p>Here’s what’s happening across your marketplace.</p></div><button class="btn btn-primary d-sm-none" type="button" data-bs-toggle="modal" data-bs-target="#reportModal" aria-label="Export report"><i class="fa-solid fa-arrow-down-to-line" aria-hidden="true"></i></button></div>
+
+        <section class="row g-3 admin-metrics" aria-label="Marketplace summary">
+          <div class="col-6 col-xl-3"><article class="admin-metric"><div class="metric-top"><span>Active tasks</span><span class="metric-icon teal"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span></div><strong>248</strong><div class="metric-foot"><span class="trend-up"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> 8.4%</span><span>vs last month</span></div></article></div>
+          <div class="col-6 col-xl-3"><article class="admin-metric"><div class="metric-top"><span>Registered users</span><span class="metric-icon blue"><i class="fa-solid fa-users" aria-hidden="true"></i></span></div><strong>3,842</strong><div class="metric-foot"><span class="trend-up"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> 12.1%</span><span>vs last month</span></div></article></div>
+          <div class="col-6 col-xl-3"><article class="admin-metric"><div class="metric-top"><span>Completed this month</span><span class="metric-icon amber"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span></div><strong>1,206</strong><div class="metric-foot"><span class="trend-up"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> 6.2%</span><span>vs last month</span></div></article></div>
+          <div class="col-6 col-xl-3"><article class="admin-metric"><div class="metric-top"><span>Open reports</span><span class="metric-icon red"><i class="fa-solid fa-flag" aria-hidden="true"></i></span></div><strong>07</strong><div class="metric-foot"><span class="trend-alert"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> 2 urgent</span><span>needs review</span></div></article></div>
+        </section>
+
+        <section class="admin-panel mt-4" id="tasks">
+          <div class="panel-heading"><div><div class="eyebrow">Marketplace operations</div><h2>Task management</h2><p>Review recent errands and update their status.</p></div><a class="panel-link" href="#activity">View activity <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div>
+          <div class="task-filters"><label class="admin-search table-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="taskSearch" type="search" placeholder="Search errands" aria-label="Search errands"></label><select id="taskStatusFilter" class="form-select" aria-label="Filter tasks by status"><option value="all">All statuses</option><option value="open">Open</option><option value="in progress">In progress</option><option value="completed">Completed</option><option value="flagged">Flagged</option></select><button id="clearTaskFilters" class="btn btn-outline-dark" type="button">Reset</button></div>
+          <div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th scope="col">Task</th><th scope="col">Poster</th><th scope="col">Offers</th><th scope="col">Budget</th><th scope="col">Status</th><th scope="col">Updated</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="taskRows">
+            <tr data-status="open"><td><div class="table-primary">Pick up a few groceries</div><div class="table-secondary">Shopping · North Park</div></td><td><div class="table-primary">Morgan P.</div><div class="table-secondary">Verified</div></td><td>2 offers</td><td class="fw-bold">$25–$40</td><td><span class="status-label status-open">Open</span></td><td>12 min ago</td><td><button class="icon-button row-action" type="button" aria-label="Mark Pick up a few groceries completed"><i class="fa-solid fa-check" aria-hidden="true"></i></button></td></tr>
+            <tr data-status="in progress"><td><div class="table-primary">Deliver a parcel downtown</div><div class="table-secondary">Delivery · Downtown</div></td><td><div class="table-primary">Jamie R.</div><div class="table-secondary">Verified</div></td><td>1 offer</td><td class="fw-bold">$18–$28</td><td><span class="status-label status-progress">In progress</span></td><td>38 min ago</td><td><button class="icon-button row-action" type="button" aria-label="Mark Deliver a parcel downtown completed"><i class="fa-solid fa-check" aria-hidden="true"></i></button></td></tr>
+            <tr data-status="flagged"><td><div class="table-primary">Help move a bookshelf</div><div class="table-secondary">Help · University Heights</div></td><td><div class="table-primary">Taylor S.</div><div class="table-secondary">New member</div></td><td>0 offers</td><td class="fw-bold">$35–$55</td><td><span class="status-label status-flagged">Flagged</span></td><td>1 hr ago</td><td><button class="icon-button row-action" type="button" aria-label="Clear report for Help move a bookshelf"><i class="fa-solid fa-flag" aria-hidden="true"></i></button></td></tr>
+            <tr data-status="completed"><td><div class="table-primary">Pick up flowers and a card</div><div class="table-secondary">Shopping · Hillcrest</div></td><td><div class="table-primary">Robin L.</div><div class="table-secondary">Verified</div></td><td>3 offers</td><td class="fw-bold">$20–$35</td><td><span class="status-label status-complete">Completed</span></td><td>Yesterday</td><td><button class="icon-button row-action" type="button" aria-label="View Pick up flowers and a card"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button></td></tr>
+          </tbody></table></div>
+          <div class="panel-foot"><span id="taskCount">Showing 4 of 18 tasks</span><a href="#tasks">View all tasks <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div>
+        </section>
+
+        <div class="row g-3 mt-1">
+          <div class="col-xl-7" id="users"><section class="admin-panel h-100"><div class="panel-heading compact"><div><div class="eyebrow">Community</div><h2>Recent users</h2></div><a class="panel-link" href="#users">View all</a></div><label class="admin-search table-search mb-3"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="userSearch" type="search" placeholder="Search users" aria-label="Search users"></label><div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th scope="col">Member</th><th scope="col">Role</th><th scope="col">Joined</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="userRows">
+            <tr><td><div class="member-cell"><span class="member-avatar mint">JL</span><span><span class="table-primary d-block">Jordan Lee</span><span class="table-secondary">jordan.lee@email.test</span></span></span></td><td>Both</td><td>Today</td><td><span class="status-label status-open user-status">Active</span></td><td><button class="btn btn-sm btn-outline-dark user-toggle" type="button">Suspend</button></td></tr>
+            <tr><td><div class="member-cell"><span class="member-avatar peach">AM</span><span><span class="table-primary d-block">Alex Morgan</span><span class="table-secondary">alex.m@email.test</span></span></span></td><td>Runner</td><td>Sep 27</td><td><span class="status-label status-open user-status">Active</span></td><td><button class="btn btn-sm btn-outline-dark user-toggle" type="button">Suspend</button></td></tr>
+            <tr><td><div class="member-cell"><span class="member-avatar blue">SK</span><span><span class="table-primary d-block">Sam Kim</span><span class="table-secondary">sam.k@email.test</span></span></span></td><td>Poster</td><td>Sep 26</td><td><span class="status-label status-suspended user-status">Review</span></td><td><button class="btn btn-sm btn-outline-dark user-toggle" type="button">Suspend</button></td></tr>
+          </tbody></table></div><div class="panel-foot"><span id="userCount">Showing 3 recent users</span><a href="#users">Manage users <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></div></section></div>
+          <div class="col-xl-5" id="activity"><section class="admin-panel h-100"><div class="panel-heading compact"><div><div class="eyebrow">Audit trail</div><h2>Activity log</h2></div><button class="icon-button" type="button" id="refreshActivity" aria-label="Refresh activity log"><i class="fa-solid fa-rotate" aria-hidden="true"></i></button></div><div class="activity-list" id="activityList">
+            <article class="activity-item"><span class="activity-icon success"><i class="fa-solid fa-user-check" aria-hidden="true"></i></span><div><p><strong>Alex Morgan</strong> completed verification</p><time>09:42 · User review</time></div><span class="activity-dot"></span></article>
+            <article class="activity-item"><span class="activity-icon warning"><i class="fa-solid fa-flag" aria-hidden="true"></i></span><div><p>Task <strong>#ER-3082</strong> was reported</p><time>09:18 · Safety report</time></div><span class="activity-dot alert"></span></article>
+            <article class="activity-item"><span class="activity-icon info"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span><div><p><strong>Jordan Lee</strong> accepted a runner offer</p><time>08:55 · Task update</time></div></article>
+            <article class="activity-item"><span class="activity-icon neutral"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></span><div><p><strong>3 new members</strong> joined Errand</p><time>08:30 · Registration</time></div></article>
+          </div><div class="panel-foot"><span>Latest platform events</span><button class="text-button" type="button" id="showAllActivity">View audit log</button></div></section></div>
+        </div>
+        <footer class="admin-footer"><span>Errand Admin · Internal workspace</span><span>Last synced just now</span></footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header"><div><span class="eyebrow">Report export</span><h2 class="modal-title h5 mt-1" id="reportModalTitle">Download task report</h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="muted">Export the current task list as a CSV file for review.</p><button class="btn btn-primary w-100" type="button" id="exportTasks"><i class="fa-solid fa-download me-2" aria-hidden="true"></i>Download CSV</button></div></div></div></div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="adminToast" class="toast" role="status" aria-live="polite" aria-atomic="true"><div class="toast-header"><span class="brand-symbol me-2" style="width:24px;height:24px;border-radius:7px;font-size:.75rem"><i class="fa-solid fa-check" aria-hidden="true"></i></span><strong class="me-auto">Errand Admin</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div><div class="toast-body" id="adminToastMessage">Dashboard updated.</div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
